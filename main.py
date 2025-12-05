@@ -3,7 +3,7 @@ from evaluator import evaluar_fortaleza
 from storage import guardar_contraseña
 
 def generar():
-    print("\n=== CONFIGURACIÓN DE GENERACIÓN ===")
+    print("\n-------- CONFIGURACIÓN DE GENERACIÓN --------")
 
     longitud = int(input("Longitud: "))
     mayus = input("Incluir mayúsculas? (s/n): ").lower() == "s"
@@ -25,7 +25,7 @@ def menu():
     contraseña_actual = ""
 
     while True:
-        print("\n===== GENERADOR SEGURO DE CONTRASEÑAS =====")
+        print("\n-------- CONFIGURACIÓN DE GENERACIÓN --------")
         print("1. Generar nueva contraseña")
         print("2. Guardar contraseña actual")
         print("3. Salir")
