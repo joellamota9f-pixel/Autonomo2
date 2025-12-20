@@ -1,7 +1,7 @@
-from generator import generar_contraseña
-from evaluator import evaluar_fortaleza
-from storage import guardar_contraseña
-from utils import limpiar_pantalla
+from generator_final import generar_contraseña
+from evaluator_final import evaluar_fortaleza
+from storage_final import guardar_contraseña
+from utils_final import limpiar_pantalla
 
 # Diccionario como estructura de datos
 contraseñas = {}
@@ -67,3 +67,4 @@ def menu():
 
 
 menu()
+
