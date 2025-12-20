@@ -1,1 +1,2 @@
-Hola
+Objetivo del Proyecto
+Desarrollar una aplicación funcional aplicando los conocimientos adquiridos en la asignatura, con el fin de analizar y comprender la arquitectura y las funcionalidades de un sistema de software. El proyecto busca poner en práctica el uso de estructuras lógicas, estructuras repetitivas y buenas prácticas de programación, así como el uso de herramientas de control de versiones mediante GitHub para la gestión del desarrollo.
