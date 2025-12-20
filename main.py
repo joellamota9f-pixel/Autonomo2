@@ -1,24 +1,11 @@
 from generator import generar_contraseña
 from evaluator import evaluar_fortaleza
 from storage import guardar_contraseña
-from utils import limpiar_pantalla
-
-# Diccionario como estructura de datos
-contraseñas = {}
 
 def generar():
-    limpiar_pantalla()
-    print("-------- CONFIGURACIÓN DE GENERACIÓN --------")
+    print("\n-------- CONFIGURACIÓN DE GENERACIÓN --------")
 
-    try:
-        longitud = int(input("Longitud de la contraseña: "))
-        if longitud <= 0:
-            print("La longitud debe ser mayor a 0.")
-            return ""
-    except ValueError:
-        print("Debes ingresar un número válido.")
-        return ""
-
+    longitud = int(input("Longitud: "))
     mayus = input("Incluir mayúsculas? (s/n): ").lower() == "s"
     minus = input("Incluir minúsculas? (s/n): ").lower() == "s"
     numeros = input("Incluir números? (s/n): ").lower() == "s"
@@ -34,20 +21,16 @@ def generar():
 
 
 def menu():
+
     contraseña_actual = ""
-    opciones_validas = ["1", "2", "3"]
 
     while True:
-        print("\n-------- MENÚ PRINCIPAL --------")
+        print("\n-------- CONFIGURACIÓN DE GENERACIÓN --------")
         print("1. Generar nueva contraseña")
         print("2. Guardar contraseña actual")
         print("3. Salir")
 
         opcion = input("Selecciona una opción: ")
-
-        if opcion not in opciones_validas:
-            print("Opción no válida.")
-            continue
 
         if opcion == "1":
             contraseña_actual = generar()
@@ -56,14 +39,16 @@ def menu():
             if contraseña_actual == "":
                 print("Primero debes generar una contraseña.")
             else:
-                nombre = input("Nombre o etiqueta: ")
-                contraseñas[nombre] = contraseña_actual  # Diccionario
+                nombre = input("Nombre o etiqueta para guardar: ")
                 guardar_contraseña(nombre, contraseña_actual)
                 print("Contraseña guardada correctamente.")
 
         elif opcion == "3":
             print("Saliendo del programa...")
             break
+
+        else:
+            print("Opción no válida. Intente nuevamente.")
 
 
 menu()

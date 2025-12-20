@@ -1,4 +1,3 @@
-import os
-
 def limpiar_pantalla():
+    import os
     os.system("cls" if os.name == "nt" else "clear")

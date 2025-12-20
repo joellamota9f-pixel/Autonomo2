@@ -14,9 +14,10 @@ def generar_contraseña(longitud, mayus, minus, numeros, simbolos):
     if simbolos:
         caracteres += string.punctuation
 
-    # Política por defecto
+    # Política por defecto si no elige nada
     if caracteres == "":
         caracteres = string.ascii_letters + string.digits
 
+    # Generar contraseña segura
     contraseña = "".join(secrets.choice(caracteres) for _ in range(longitud))
     return contraseña
